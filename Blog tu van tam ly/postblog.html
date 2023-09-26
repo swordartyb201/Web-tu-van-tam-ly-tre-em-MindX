@@ -1,0 +1,166 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&display=swap" rel="stylesheet">
+           
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    
+   
+    <link rel="stylesheet" href="postblog.css">
+</head>
+<body>
+        <div class="page-container">
+                <!-- Header -->
+                <header class="header">
+                    
+                    <div class="top-bar">
+                        <div class="top-bar-container">
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12">
+                                        <ul class="top-bar-content d-flex flex-row align-items-center">
+                                            <ul class="contact-list">
+                                                <li>
+                                                    <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                                    <div class="phone-number">0869 672 234</div>
+                                                </li>
+                                                <li>
+                                                    <i class="fas fa-envelope"></i>
+                                                    <div class="mail-address ">datmh2105@gmail.com</div>
+                                                </li>
+                                            </ul>
+                                            <div class="top-bar-login ml-auto">
+                                                <div class="login-button logged-out"><a href="./login.html">Đăng nhập</a></div>
+                                            </div>
+                                            <div class="top-bar-account">
+                                                <div class="account-info logged-in"><a href="#" data-toggle="modal" data-target="#modalaccount">Tài khoản của bạn</a></div>
+                                            </div>
+                                            <div class="top-bar-logout">
+                                                <div class="logout-button logged-in"><a id="logout">Đăng xuất</a></div>
+                                            </div>
+                                            <div class="top-bar-sign-up">
+                                                <div class="sign-up-button logged-out"><a href="./signup.html">Tạo tài khoản</a></div>
+                                            </div>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    
+                    <div class="modal fade" id="modalaccount">
+                        <div class="modal-dialog">
+                            <div class="modal-content align-items-center">
+                                <h1>Thông tin tài khoản</h1><br/>
+                                <div class="account-infos"></div><br/>
+                                <div><input class="btn btn-primary" data-dismiss="modal" value="Đóng"></div>
+                            </div>
+                        </div>
+                    </div>
+    
+                    <div class="header-container">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <div class="header-content d-flex align-items-center">
+                                        <div class="logo">
+                                            <a class="navbar-brand" href="./index.html"><img src="logo.png" alt="School Counseling" /></a>
+                                        </div>
+                                        <nav class="nav_bar ml-auto">                                      
+                                            <ul class="navbar_nav">
+                                                <li class="nav-item active">
+                                                    <a class="nav-link" href="./index.html">Trang chủ</a>
+                                                </li>
+                                                <li class="nav-item"><a class="nav-link" href="#" >Blogs</a></li>
+                                                <li class="nav-item"><a class="nav-link" href="#" >Tư vấn trực tuyến</a></li>
+                                                <li class="nav-item admin" style="display: none;"><a class="nav-link" href="#" >Tạo Blogs</a></li>
+                                            </ul>
+                                            <div class="facebook"><i class="fab fa-facebook-f"></i></div>
+                                            <div class="twitter"><i class="fab fa-twitter"></i></div>
+                                            <div class="youtube"><i class="fab fa-youtube"></i></div>
+                                            <div class="menu-toggle menu_mn"><i class="fas fa-bars menu_mm" aria-hidden="true"></i></div>
+                                        </nav>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </header>
+    
+                <div class="menu d-flex flex-column align-items-end text-right menu_mm">
+                    <div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+                    <nav class="menu_nav">
+                        <ul class="menu_mm">
+                            <li class="menu_mm"><a href="index.html">Trang chủ</a></li>
+                            <li class="menu_mm"><a href="#">Blogs</a></li>
+                            <li class="menu_mm"><a href="#">Tư vấn trực tuyến</a></li>
+                            <li class="nav-item admin" style="display: none;"><a class="nav-link" href="#" >Tạo Blogs</a></li>
+                        </ul>
+                    </nav>
+                </div>
+    
+    <form id="nhap" style="color: black;padding-left: 350px;">
+            <input type="text" id="myInput1" placeholder="time..." >
+            <!-- <button onclick="newElement()" class="addBtn" >ADD</button> -->
+           
+
+            <input type="text" id="myInput2" placeholder="Tiêu đề..." />
+            <!-- <button onclick="newElement()" class="addBtn">ADD</button> -->
+
+            
+            
+            <input type="text" id="myInput4" placeholder="ảnh...." >
+            <!-- <button onclick="newElement()" class="addBtn">ADD</button> -->
+
+            <input type="text" id="myInput5" placeholder="tác giả...">
+            <!-- <button onclick="newElement()" class="addBtn">ADD</button> -->
+
+
+            <select id="danhmuc">
+                <option value="" select disable hidden> Chọn danh mục...</option>
+                <option>Học sinh</option>
+                <option>Sinh viên</option>
+                <option>Giáo viên</option>
+                <option>Phụ huynh</option>
+            </select>
+            <textarea name="" id="myInput3" cols="30" rows="10" placeholder="Nội dung"></textarea>
+            <!-- <input type="text" id="" placeholder="Nội dung..."> -->
+            <!-- <button onclick="newElement()" class="addBtn">ADD</button> -->
+
+            <!-- <button onclick="newElement()" class="addBtn">ADD</button> -->
+          <div id="submit"><button >SUBMIT</button></div>
+
+        </form>
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    var firebaseConfig = {
+        apiKey: "AIzaSyAxQOGCAakoNo0Gk7O1PyoswT6W2Huj-ss",
+        authDomain: "project1-htt.firebaseapp.com",
+        databaseURL: "https://project1-htt.firebaseio.com",
+        projectId: "project1-htt",
+        storageBucket: "project1-htt.appspot.com",
+        messagingSenderId: "149978303003",
+        appId: "1:149978303003:web:2ffc6af8c96956c393c6be"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/981c3a45da.js" crossorigin="anonymous"></script>
+    <script src="postblog.js"></script>
+
+</body>
+</html>

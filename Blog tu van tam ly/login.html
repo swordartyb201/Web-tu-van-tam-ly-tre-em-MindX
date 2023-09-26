@@ -1,0 +1,258 @@
+<!DOCTYPE HTML>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>School Counseling</title>
+
+        <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700&display=swap" rel="stylesheet">
+           
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+               
+        <!-- <link rel="stylesheet" href="home.css"> -->
+        <link rel="stylesheet" href="login.css">
+    </head>
+
+    <body>
+        <div class="page-container">
+            <!-- Header -->
+            <header class="header">
+                
+                <div class="top-bar">
+                    <div class="top-bar-container">
+                        <div class="container-fluid">
+                            <div class="row">
+                                <div class="col">
+                                    <ul class="top-bar-content d-flex flex-row align-items-center">
+                                        <ul class="contact-list">
+                                            <li>
+                                                <i class="fas fa-phone-alt" aria-hidden="true"></i>
+                                                <div class="phone-number">0869 672 234</div>
+                                            </li>
+                                            <li>
+                                                <i class="fas fa-envelope"></i>
+                                                <div class="mail-address ">datmh2105@gmail.com</div>
+                                            </li>
+                                        </ul>
+                                        <div class="top-bar-login ml-auto">
+                                            <div class="login-button logged-out"><a href="./login.html">Đăng nhập</a></div>
+                                        </div>
+                                        <div class="top-bar-account">
+                                            <div class="account-info logged-in"><a href="#" data-toggle="modal" data-target="#modalaccount">Tài khoản của bạn</a></div>
+                                        </div>
+                                        <div class="top-bar-logout">
+                                            <div class="logout-button logged-in"><a id="logout">Đăng xuất</a></div>
+                                        </div>
+                                        <div class="top-bar-sign-up">
+                                            <div class="sign-up-button logged-out"><a href="./signup.html">Tạo tài khoản</a></div>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                
+                <div class="modal fade" id="modalaccount">
+                    <div class="modal-dialog">
+                        <div class="modal-content align-items-center">
+                            <h1>Thông tin tài khoản</h1><br/>
+                            <div class="account-infos"></div><br/>
+                            <div><input class="btn btn-primary" data-dismiss="modal" value="Đóng"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-container">
+                    <div class="container-fluid">
+                        <div class="row">
+                            <div class="col">
+                                <div class="header-content d-flex align-items-center">
+                                    <div class="logo">
+                                        <a class="navbar-brand" href="./index.html"><img src="logo.png" alt="School Counseling" /></a>
+                                    </div>
+                                    <nav class="nav_bar ml-auto">                                      
+                                        <ul class="navbar_nav">
+                                            <li class="nav-item active">
+                                                <a class="nav-link" href="./index.html">Trang chủ</a>
+                                            </li>
+                                            <li class="nav-item"><a class="nav-link" href="#" >Blogs</a></li>
+                                            <li class="nav-item"><a class="nav-link" href="#" >Tư vấn trực tuyến</a></li>
+                                            <li class="nav-item admin" style="display: none;"><a class="nav-link" href="#" >Tạo Blogs</a></li>
+                                        </ul>
+                                        <div class="facebook"><i class="fab fa-facebook-f"></i></div>
+                                        <div class="twitter"><i class="fab fa-twitter"></i></div>
+                                        <div class="youtube"><i class="fab fa-youtube"></i></div>
+                                        <div class="menu-toggle menu_mn"><i class="fas fa-bars menu_mm" aria-hidden="true"></i></div>
+                                    </nav>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </header>
+
+            <div class="menu d-flex flex-column align-items-end text-right menu_mm">
+                <div class="menu_close_container"><div class="menu_close"><div></div><div></div></div></div>
+                <nav class="menu_nav">
+                    <ul class="menu_mm">
+                        <li class="menu_mm"><a href="index.html">Trang chủ</a></li>
+                        <li class="menu_mm"><a href="#">Blogs</a></li>
+                        <li class="menu_mm"><a href="#">Tư vấn trực tuyến</a></li>
+                        <li class="nav-item admin" style="display: none;"><a class="nav-link" href="#" >Tạo Blogs</a></li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="sign-in-container align-items-center">
+                <div class="both">
+                    <div class="wrap-login" id="login_div">
+                        <div class="alert alert-danger center-block" role="alert"></div>
+                        <form id="login_form"> 
+                            <span class="form-title"><h1>Sign in with</h1></span>
+                            <div class="sign-in-social">
+                                <a href="#" class="btn-fb"><i class="fab fa-facebook-square"></i>Facebook</a>
+                                <a href="#" class="btn-google"><i class="fab fa-google"></i></i>Google</a>
+                            </div>
+                            <span class="option">or use your account</span>
+                            <div class="text-heading"><span>Email Address</span></div>
+                            <div> 
+                                <input type="email" id="email_field"/>
+                            </div>
+                            <div class="text-heading">
+                                <span>Password</span>
+                                <a href="#">Quên mật khẩu?</a>
+                            </div>
+                            <div>
+                                <input type="password" id="password_field"/>
+                            </div>
+                            <div class="login-btn">
+                                <button>Đăng nhập</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="loggedin-div" id="user_div">
+                        <div class="loggedin">
+                            <div class="loggedin-panel">
+                                <h1>Welcome Back!</h1>
+                                <p id="user_subtitle" style="color:darkolivegreen">It's nice to see you again</p>
+                                <button>Trở về trang chủ</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="overlay-container">
+                        <div class="overlay">
+                            <div class="overlay-panel">
+                                <h1>Bạn chưa có tài khoản?</h1>
+                                <p>Hãy chia sẻ câu chuyện của bạn với chúng tôi</p>
+                                <button class="sign-up-btn">Đăng ký</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="site-footer">
+              <div class="footer_background">
+                <div class="container">
+                  <div class="row">
+                      <div class="col-lg-4">
+                        <div class="fb-page" data-href="https://www.facebook.com/PVcomBankFanpage/" data-tabs="" data-width="" data-height="" data-small-header="false" data-adapt-container-width="true" data-hide-cover="false" data-show-facepile="false">
+                          <blockquote cite="https://www.facebook.com/PVcomBankFanpage/" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/PVcomBankFanpage/">PVcomBank</a>
+                          </blockquote>
+                        </div>
+                      </div>
+                      <div class="col-lg-4 ">
+                                <!-- Footer Contact -->
+                        <div class="footer_section footer_contact">
+                          <div class="footer_title">Contact Us</div>
+                          <div class="footer_contact_info">
+                            <ul>
+                              <li>Hotline: 0377522414</li>
+                              <li>Email: hathutra00@gmail.com</li>
+                              <li>Địa chỉ: 40 Baria Sreet 133/2 New York City, United States</li>
+                            </ul>
+                          </div>
+                        </div>
+                                
+                      </div>
+
+                      <div class="col-lg-2 footer_col">
+                                <!-- Footer links -->
+                                <div class="footer_section footer_links">
+                                    <div class="footer_title">About Us</div>
+                                    <div class="footer_links_container">
+                                        <ul>
+                                            <li><a href="index.html">Về chúng tôi</a></li>
+                                            <li><a href="about.html">Câu chuyện</a></li>
+                                            <li><a href="contact.html">Hoạt động</a></li>
+                                            <li><a href="#">Phát triển</a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                
+                      </div>
+                      <div class="col-lg-2 footer_col">
+                          <!-- Footer links -->
+                          <div class="footer_section footer_links">
+                              <div class="footer_title">Navigation</div>
+                              <div class="footer_links_container">
+                                  <ul>
+                                      <li><a href="index.html">Home</a></li>
+                                      <li><a href="about.html">Blogs</a></li>
+                                      <li><a href="contact.html">Tư vấn trực tuyến</a></li>
+                                  </ul>
+                              </div>
+                          </div>                         
+                      </div>
+
+                  </div>
+                </div>
+              </div>
+            </footer>
+        </div>
+
+        <div id="fb-root"></div>
+        <script async defer crossorigin="anonymous" src="https://connect.facebook.net/vi_VN/sdk.js#xfbml=1&version=v5.0&appId=479550959464317&autoLogAppEvents=1"></script>
+
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+
+        <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-app.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-auth.js"></script>
+        <!-- TODO: Add SDKs for Firebase products that you want to use
+             https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.5.0/firebase-firestore.js"></script>
+        <script>
+            // Your web app's Firebase configuration
+            var firebaseConfig = {
+              apiKey: "AIzaSyAm0CwWSOMwA6XOXb-VvUIp1lzOtl3WN38",
+              authDomain: "scproject-e7fc8.firebaseapp.com",
+              databaseURL: "https://scproject-e7fc8.firebaseio.com",
+              projectId: "scproject-e7fc8",
+              storageBucket: "scproject-e7fc8.appspot.com",
+              messagingSenderId: "727294665981",
+              appId: "1:727294665981:web:9929c43336ad8e5fb98a94"
+            };
+            // Initialize Firebase
+            firebase.initializeApp(firebaseConfig);
+          </script>
+
+        <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+        <!-- <script type="text/javascript">
+                $(document).ready(function() {
+                    $('.menu-toggle').click(function() {
+                        $('.menu-toggle').toggleClass('active')
+                        $('nav').toggleClass('active')
+                    })
+                })
+        </script> -->
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/981c3a45da.js" crossorigin="anonymous"></script>
+        <script src="login.js"></script>
+
+    </body>
+</html>
